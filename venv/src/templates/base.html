@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    {% block top %}
+        <h1>This page is about books</h1>
+        <h2>This is my navbar</h2>
+    {% endblock %}
+    {% block content %}
+        {% block header %}
+            <h3>Put here header</h3>
+        {% endblock %}
+        {% block lorem %}
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices dictum odio fringilla ultricies. Aenean sollicitudin risus ac tempus placerat. Sed vulputate posuere est, eget fermentum justo luctus sed. Phasellus eros massa, facilisis id nisi nec, tincidunt accumsan quam. Integer quis dolor lorem. Mauris consectetur, ex id semper iaculis, nisl lorem posuere urna, eget iaculis ex purus et ligula. Aenean mollis quis ex sed aliquam. Vivamus auctor diam a eros semper facilisis. Sed vulputate tempor tellus vitae imperdiet. Curabitur consequat tortor tortor, quis maximus mi sollicitudin vitae. Vivamus hendrerit nisi dolor, et efficitur arcu faucibus in. Duis venenatis elit eu justo commodo, eu pellentesque justo finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p>
+                Nulla risus odio, rhoncus ac consequat ac, feugiat et risus. Mauris vitae congue libero. Donec tempor vel turpis non tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam venenatis facilisis tempus. Integer rhoncus, lacus ut sagittis commodo, dolor magna pellentesque lectus, ac volutpat ante ipsum at dolor. Suspendisse dictum, ex a posuere aliquet, neque enim semper purus, at convallis enim magna non arcu. Nam magna dolor, vulputate pellentesque quam nec, venenatis efficitur enim. Sed quis blandit lorem. Integer tempor eget quam sed lobortis. Curabitur in libero faucibus, congue nulla ut, tempor lorem. Vestibulum fringilla arcu et metus tempus gravida. Donec pretium imperdiet ante, eget egestas lorem sollicitudin ut. Nunc porttitor orci nec mauris elementum tincidunt. Vestibulum posuere urna lectus, a vestibulum orci vehicula non. Phasellus tellus nibh, ornare vel lacinia in, vestibulum et nunc.
+            </p>
+        {% endblock %}
+    {% endblock %}
+<!--    <ul>-->
+<!--        {% for item in items %}-->
+<!--            <li>{{forloop.counter}} - {{item}}</li>-->
+<!--        {% endfor %}-->
+<!--    </ul>-->
+
+</body>
+</html>

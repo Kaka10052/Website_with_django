@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <p>Hello {{ request.user|capfirst}} <a href="{% url 'logout' %}">Logout</a></p>
+</body>
+</html>

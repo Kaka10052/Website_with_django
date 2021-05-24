@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Items</title>
+</head>
+{% extends 'base.html' %}
+<body>
+    {% block header %}
+        <h2>Items</h2>
+    {% endblock %}
+    {% block lorem %}
+        <p>
+            Some paragraph. Here is our dictionary: <span>{{name}}, {{ list }} </span>
+        </p>
+    {% endblock %}
+</body>
+</html>

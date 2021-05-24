@@ -1,0 +1,15 @@
+.nav {
+    list-style-type: none;
+}
+.nav li {
+    padding: 20px;
+    display: inline;
+}
+.nav form {
+    padding: 20px;
+    display: inline;
+}
+span.rt {
+    float: right;
+    padding-right: 40px;
+}

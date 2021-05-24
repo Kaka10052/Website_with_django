@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Categories</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <ol>
+        {% for db_category, user_friendly_category in categories_list %}
+        <li><a href="{% url 'search-list' db_category %}">{{user_friendly_category}}</a></li>
+        {% endfor %}
+    </ol>
+</body>
+</html>

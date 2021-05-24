@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ book.title }}</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <h1>{{ book.title|capfirst }}</h1>
+    {% if book.cover %}
+        <img src="{{book.cover.url}}" alt="{{book.cover}}">
+    {% else %}
+        <img src="{% static '/images/books/default_cover.jpg' %}" alt="File not found">
+    {% endif %}
+    <h3>{{ book.description|capfirst }}</h3>
+    <h3>{{ book.price }}</h3>
+    <h3><a href="{% url 'add_book_to_user' book.id %}">Add to bookcase</a></h3>
+
+</body>
+</html>

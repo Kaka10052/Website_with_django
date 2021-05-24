@@ -1,0 +1,25 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/nav.css' %}" >
+<nav>
+    <ul class="nav">
+        <li><a href="{% url 'home' %}" >Home</a></li>
+        <li><a href="{% url 'book-list' %}">All books</a></li>
+        <li><a href="{% url 'categories-list' %}">Categories</a> </li>
+        <form method="POST" action="{% url 'book-search' %}">
+            {% csrf_token %}
+            <input type="search" placeholder="Search" name="search" />
+            <button type="submit">Search</button>
+        </form>
+        <span class="rt">
+        {% if request.user.is_authenticated %}
+            <li>Hello {{ request.user|capfirst }}
+                <a href="{% url 'own-bookcase-view' %}">Bookcase</a>
+                <a href="{% url 'own-profile-view' %}">Profile</a>
+                <a href="{% url 'logout' %}">Logout</a></li>
+        {% else %}
+            <li><a href="{% url 'login-view' %}">Log in</a>
+                <a href="{% url 'register-view' %}">Register</a></li>
+        {% endif %}
+        </span>
+    </ul>
+</nav>

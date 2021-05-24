@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of articles</title>
+</head>
+<body>
+    <h1>List of articles</h1>
+    <ul>
+        {% for object in object_list %}
+            {% if object.active %}
+                <li>{{ object.id }} - <a href="{{ object.get_absolute_url }}">{{ object.title }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

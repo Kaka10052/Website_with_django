@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookcase</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <h1>{{ user.username|capfirst }}'s bookcase:</h1>
+    {% for book in books %}
+        <li>{{ book.id }} - <a href='{{ book.get_absolute_url }}' >{{ book.title }}</a></li>
+    {% endfor %}
+</body>
+</html>
