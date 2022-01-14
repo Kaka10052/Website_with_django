@@ -13,8 +13,12 @@
     {% else %}
         <img src="{% static '/images/books/default_cover.jpg' %}" alt="File not found">
     {% endif %}
-    <h3>{{ book.description|capfirst }}</h3>
-    <h3>{{ book.price }}</h3>
+    {% if book.decription %}
+        <h3>Description: <br>{{ book.description|capfirst }}</h3>
+    {% else %}
+        <h3>There is no description to this book</h3>
+    {% endif %}
+    <h3>Common price: {{ book.price }}</h3>
     <h3><a href="{% url 'add_book_to_user' book.id %}">Add to bookcase</a></h3>
 
 </body>

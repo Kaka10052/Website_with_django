@@ -67,7 +67,6 @@ def own_profile_view(request):
 @allowed_groups(['reader', 'admin', 'moderator'])
 def own_bookcase_view(request):
     books = request.user.reader.books.all()
-    print(books)
     context = {
         'books': books
     }

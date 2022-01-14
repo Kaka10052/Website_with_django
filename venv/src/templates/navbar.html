@@ -13,6 +13,7 @@
         <span class="rt">
         {% if request.user.is_authenticated %}
             <li>Hello {{ request.user|capfirst }}
+                <a href="{% url 'book-create' %}">Create book</a>
                 <a href="{% url 'own-bookcase-view' %}">Bookcase</a>
                 <a href="{% url 'own-profile-view' %}">Profile</a>
                 <a href="{% url 'logout' %}">Logout</a></li>
